@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## 디지털컨버전스 기반 JAVA(자바) 개발자 양성과정
+2020년 12월 30일 - 2021년 6월 14일 과정 (900시간)
 
-You can use the [editor on GitHub](https://github.com/lepelaka/human00/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+### 목차
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# 응용SW기초기술활용
+# 요구사항 확인
+# 서버프로그램 구현
+# 인터페이스 구현
+# 프로그래밍 언어 활용
+# 애플리케이션 테스트 수행
+# 통합구현
+# 펌웨어 구현
+# 화면설계
+# 화면구현
+# 디바이스 드라이버 구현
+# 애플리케이션 설계
+# 임베디드 애플리케이션
+# SQL 활용
+# UI구현
+# 네트워크 프로그래밍 구현
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lepelaka/human00/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
