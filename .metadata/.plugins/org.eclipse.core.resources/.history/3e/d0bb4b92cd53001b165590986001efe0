@@ -1,0 +1,7 @@
+package chap03;
+
+public class LogicExam {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package chap02;
+
+public class Variable2 {
+	public static void main(String[] args) {
+		char ch1 = '가';
+		char ch2 = 'A';
+		
+		System.out.println(ch1);
+		System.out.println(ch2);
+	}
+}

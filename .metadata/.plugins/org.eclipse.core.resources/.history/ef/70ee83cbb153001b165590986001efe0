@@ -1,0 +1,11 @@
+package chap03;
+
+public class OverflowExample {
+	public static void main(String[] args) {
+		int x = 1_000_000;
+		int y = 1_000_000;
+		
+		int z = x * y;
+		
+	}
+}

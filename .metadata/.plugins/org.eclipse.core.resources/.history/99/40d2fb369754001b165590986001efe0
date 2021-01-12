@@ -1,0 +1,23 @@
+package chap04;
+
+public class IfElseIfElseExample {
+	public static void main(String[] args) {
+		int score = 75;
+		String str = "";
+
+		if (score >= 90) {
+			str = "A";
+		} 
+		else if (score >= 80) {
+			str = "B";
+		} 
+		else if (score >= 70) {
+			str = "C";
+		} 
+		else {
+			str = "D";
+		}
+
+		System.out.println("등급은 " + str + "입니다");
+	}
+}

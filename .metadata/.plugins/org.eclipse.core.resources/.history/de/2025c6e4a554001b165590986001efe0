@@ -1,0 +1,10 @@
+package chap04;
+
+public class Ex4 {
+	public static void main(String[] args) {
+		// 4번문제 
+		// 가위 바위 보 게임만들기
+		
+		System.out.println("가위(1), 바위(2), 보(3) 중에 하나를 입력하세요");
+	}
+}

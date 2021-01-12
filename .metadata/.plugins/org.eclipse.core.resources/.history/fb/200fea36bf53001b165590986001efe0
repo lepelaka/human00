@@ -1,0 +1,14 @@
+package chap03;
+
+public class CompareOperatorExample1 {
+	public static void main(String[] args) {
+		// abbr
+		
+		// == eq : equal
+		// != ne : not equal
+		// >  gt : greater than
+		// >= ge : greater than equal
+		// <  lt : lesser than
+		// <= le : lesser than equal
+	}
+}

@@ -1,0 +1,16 @@
+package chap02;
+
+public class DigitExam {
+	public static void main(String[] args) {
+		// 정수 >> 2진수
+		// 실수 >> 2진수
+		
+		// 3.14 연산
+		// 3.25 연산
+		
+		System.out.println(3.14 + 1);
+		System.out.println(3.25 + 1);
+		
+		
+	}
+}

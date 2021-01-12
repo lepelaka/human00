@@ -1,0 +1,16 @@
+package js;
+
+public class Ex2 {
+	public static void main(String[] args) {
+		int number = 121;
+		int size = 10;
+		
+		// 버림, 반올림, 올림
+		// 123 / 10 = 12.3 >> 13
+		// 122 / 10 = 13
+		// 120 / 10 = 12 >> 12
+		
+		System.out.println(number % size == 0 ? number / size : number / size + 1);;
+		System.out.println((number + 9) / size);
+	}
+}

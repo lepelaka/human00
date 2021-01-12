@@ -1,0 +1,23 @@
+package chap02;
+
+public class Variable {
+	public static void main(String[] args) {
+		// 변수?
+		// 하나의 값을 저장하기 위한 공간
+		
+		// 단 하나의 타입
+		// 정수를 쓸것이다. 선언! >> 정수만 저장
+		// 실수를 쓸것이다.! >> 실수만 저장
+		
+		int age; // 정수(int)타입의 age이름의 변수 선언
+		double value; // 실수(double)타입의 value이름의 변수가 선언
+		
+		int x, y, z;
+		
+		// 첫글자영문, $, _
+		// 대소문자구분
+		// 첫글자 소문자, 단어사이의 구분시 다음단어의 첫글자를 대문자
+		// 예약어 사용불가
+		
+	}
+}

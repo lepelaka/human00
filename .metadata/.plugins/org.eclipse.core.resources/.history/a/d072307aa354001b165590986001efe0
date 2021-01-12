@@ -1,0 +1,10 @@
+package chap04;
+
+import java.util.Scanner;
+
+public class ScanExam {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+	}
+}

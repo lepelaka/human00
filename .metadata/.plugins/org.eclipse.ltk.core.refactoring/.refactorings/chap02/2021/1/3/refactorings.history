@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;chap02.Ex2_Final&apos; to &apos;Chap2_Final&apos;&#x0D;&#x0A;- Original project: &apos;chap02&apos;&#x0D;&#x0A;- Original element: &apos;chap02.Ex2_Final&apos;&#x0D;&#x0A;- Renamed element: &apos;chap02.Chap2_Final&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ex2_Final&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;chap02{Ex2_Final.java[Ex2_Final" matchStrategy="1" name="Chap2_Final" qualified="false" references="true" similarDeclarations="false" stamp="1610323942827" textual="false" version="1.0"/>
+</session>

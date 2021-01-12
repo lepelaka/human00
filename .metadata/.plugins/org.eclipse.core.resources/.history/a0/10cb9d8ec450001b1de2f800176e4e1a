@@ -1,0 +1,12 @@
+package chap02;
+
+public class Variable {
+	public static void main(String[] args) {
+		// 변수?
+		// 하나의 값을 저장하기 위한 공간
+		
+		// 단 하나의 타입
+		// 정수를 쓸것이다. 선언! >> 정수만 저장
+		// 실수를 쓸것이다.! >> 실수만 저장
+	}
+}
