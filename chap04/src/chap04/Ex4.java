@@ -15,8 +15,41 @@ public class Ex4 {
 		
 		// switch를 이용해 코드 작성
 		
+		
+		
 		System.out.println("당신은 " + user + "를 냈습니다.");
 		System.out.println("컴퓨터는 " + com + "를 냈습니다.");
+		
+		
+		// 1, 2, 3
+		// 1, 2, 3
+		
+		// 5개
+		
+		// 1-3 = -2
+		// 2-3 = -1
+		// 1-2 = -1
+		// 1-1 = 0
+		// 2-2 = 0
+		// 3-3 = 0
+		// 3-2 = 1
+		// 2-1 = 1
+		// 3-1 = 2
+		
+		// 숫자 0 : 비김
+		// -2, 1 : 이김
+		// -1, 2 : 짐
+		int result = user-com;
+		switch (result) {
+		case -2: case 1:
+			System.out.println("당신이 이겼습니다.");
+			break;
+		case 2: case -1:
+			System.out.println("당신이 졌습니다.");
+			break;
+		case 0 : 
+			System.out.println("비겼습니다");
+		}
 		
 		
 		// 당신이 이겼습니다.
@@ -24,5 +57,11 @@ public class Ex4 {
 		// 당신이 졌습니다
 		
 		// 비겼습니다.
+		System.out.println("*");
+		System.out.println("**");
+		System.out.println("***");
+		System.out.println("****");
+		System.out.println("*****");
+		
 	}
 }

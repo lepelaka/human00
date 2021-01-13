@@ -17,6 +17,37 @@ public class Ex2 {
 		// 출력값 예시
 		// 점수는 82점입니다.
 		// 학점은 B- 입니다.
+		int score = 70;
+		String grade = "";
+		if(score >= 90) {
+			grade = "A";
+		}
+		else if(score >= 80) {
+			grade = "B";
+		}
+		else if(score >= 70) {
+			grade = "C";
+		}
+		else if(score >= 60) {
+			grade = "D";
+		}
+		else {
+			grade = "F";
+		}
+		int tmp = score % 10;
+		
+		if(score >= 60) {
+			if(tmp >= 8 || score == 100) {
+				grade += "+";
+			}
+			else if(tmp <= 3) {
+				grade += "-";
+			}
+		}
+		
+		System.out.println("점수는 : " + score + "점입니다.");
+		System.out.println("학점은 : " + grade + "입니다");
+		
 		
 	}
 }
