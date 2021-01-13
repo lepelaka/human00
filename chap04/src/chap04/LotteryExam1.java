@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class LotteryExam {
+public class LotteryExam1 {
 	public static void main(String[] args) {
 		Integer[] arr = new Integer[23];
 		for(int i = 0 ; i < 23 ; i++) {
