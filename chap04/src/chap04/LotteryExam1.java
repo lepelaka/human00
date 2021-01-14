@@ -27,14 +27,14 @@ public class LotteryExam1 {
 		System.out.println("셔플후");
 		System.out.println(list);
 		
-		List<Integer> result = list.subList(0, 5); 
+		List<Integer> result = list.subList(0, 4); 
 		System.out.println(result);
 		
-		// 7 : 노진주 
-		// 9 : 민지현
-		// 10 : 박상훈
-		// 20 : 이찬희
-		// 21 : 이혜영
+		// 15 : 오승현
+		// 6 : 김소연
+		// 8 : 류슬희
+		// 14 : 양수봉
+		
 		
 	}
 }
