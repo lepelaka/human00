@@ -36,5 +36,10 @@ public class LotteryExam1 {
 		// 14 : 양수봉
 		
 		
+		// 13 : 신세영
+		// 1 : 강영훈
+		
+		
+		
 	}
 }
