@@ -25,7 +25,7 @@ public class StudentEx {
 			int input = Integer.parseInt(scanner.nextLine());
 			switch (input) {
 			case 1:
-				ss.list();
+				ss.list(); // 호출
 				break;
 			case 2:
 				ss.add();

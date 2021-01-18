@@ -17,10 +17,3 @@ public class Chap06Intro {
 	}
 }
 
-class Car {
-	
-}
-
-class Tire {
-	
-}
