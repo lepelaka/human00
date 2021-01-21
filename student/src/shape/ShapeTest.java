@@ -3,13 +3,15 @@ package shape;
 public class ShapeTest {
 	public static void main(String[] args) {
 		
-		Shape[] shapes = new Shape[4];
+		Shape[] shapes = new Shape[5];
 		shapes[0] = new Circle(3);
 		shapes[1] = new Rect(3, 4);
-		shapes[2] = new Cylinder(3, 4);
+		shapes[2] = new Cylinder(3, 4); // 3: 반지름, 4: 원기둥의 높이 
 		shapes[3] = new Cylinder((Circle)shapes[0], 5);
+		shapes[4] = new Cube(3, 4, 5);
 		
 		for(Shape shape : shapes) {
+			System.out.println(shape.getClass().getName());
 			System.out.println("넓이는 : " + shape.getArea());
 			if (shape instanceof Shape2DInter) { // 2차원 도형일때
 				System.out.println("둘레는 : " + ((Shape2DInter)shape).getCircum());
@@ -18,6 +20,14 @@ public class ShapeTest {
 				System.out.println("부피는 : " + ((Shape3DInter)shape).getVolumn());
 			}
 		}
+		
+		/*
+		 *  Shape
+		 *  
+		 *  Rect, Circle, Shape3D
+		 *  
+		 *                Cylinder, Cube
+		 */
 	}
 }
 abstract class Shape {
@@ -166,7 +176,40 @@ class Cylinder extends Shape3D { // 미구현 메서드
 		// TODO Auto-generated method stub
 		return circle.getArea() * 2 + circle.getCircum() * getZ();
 	}
-	
+}
+
+class Cube extends Shape3D {
+	private Rect rect;
+	public Cube() {	}
+
+	public Cube(int x, int y, int z) {
+		rect = new Rect(x, y);
+		setZ(z);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cube(Rect rect, int z) {
+		this.rect = rect;
+		setZ(z);
+	}
+
+	public Rect getRect() {
+		return rect;
+	}
+
+	public void setRect(Rect rect) {
+		this.rect = rect;
+	}
+
+	@Override
+	public double getVolumn() {
+		return rect.getArea() * getZ();
+	}
+
+	@Override
+	public double getArea() {
+		return rect.getCircum() * getZ() + rect.getArea() * 2;
+	}
 	
 }
 
