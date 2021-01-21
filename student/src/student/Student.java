@@ -4,11 +4,11 @@ package student;
 public class Student {
 	// 학번, 이름, 국어, 영어, 수학(필드로 정의)
 	// 총점, 평균(메서드로 정의)
-	int no;
-	String name;
-	int kor;
-	int eng;
-	int mat;
+	private int no;
+	private String name;
+	private int kor;
+	private int eng;
+	private int mat;
 	
 	public Student() {} // 기본생성자
 
@@ -26,6 +26,48 @@ public class Student {
 		this.kor = s.kor;
 		this.eng = s.eng;
 		this.mat = s.mat;
+	}
+
+	// getter, setter
+	
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getKor() {
+		return kor;
+	}
+
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+
+	public int getEng() {
+		return eng;
+	}
+
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+
+	public int getMat() {
+		return mat;
+	}
+
+	public void setMat(int mat) {
+		this.mat = mat;
 	}
 
 	int getTotal() { // 인스턴스 메서드
