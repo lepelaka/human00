@@ -40,7 +40,6 @@ public class Addr implements Cloneable {
 		}
 //		return obj != null && obj instanceof Addr && phone == ((Addr)obj).phone;
 	}
-
 	@Override
 	public Addr clone() { // 공변반환타입
 		// TODO Auto-generated method stub
