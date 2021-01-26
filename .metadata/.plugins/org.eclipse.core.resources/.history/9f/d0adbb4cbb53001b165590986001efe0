@@ -1,7 +1,0 @@
-package chap03;
-
-public class NanInfinityExam {
-	public static void main(String[] args) {
-		
-	}
-}

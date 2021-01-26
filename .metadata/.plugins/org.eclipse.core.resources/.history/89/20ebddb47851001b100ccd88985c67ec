@@ -1,7 +1,0 @@
-package chap02;
-
-public class FloatDoubleExample {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,7 +1,0 @@
-package chap04;
-
-public class ScanExam {
-	public static void main(String[] args) {
-		
-	}
-}
