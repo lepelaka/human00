@@ -26,25 +26,12 @@ public class StudentService {
 	void add() {
 		// 1. 빈 객체를 하나 만들고 각각 setter를 이용해서 값을 저장
 		// 2. 지역변수에 각각 값을 입력 받은 후 생성자를 통해서 일괄적으로 객체 생성
-		
-//		Student student = new Student();
-//		System.out.print("학번 > ");
-//		student.setNo(nextInt());
-//		System.out.print("이름 > ");
-//		student.setName(nextLine());
-//		System.out.print("국어 > ");
-//		student.setKor(nextInt());
-//		System.out.print("영어 > ");
-//		student.setEng(nextInt());
-//		System.out.print("수학 > ");
-//		student.setMat(nextInt());
-		
 		System.out.print("학번 > ");
 		int no = nextInt();
 		System.out.print("이름 > ");
 		String name = nextLine();
 		System.out.print("국어 > ");
-		int kor = nextInt();
+		int kor = nextInt(); // <<<
 		System.out.print("영어 > ");
 		int eng = nextInt();
 		System.out.print("수학 > ");
@@ -121,5 +108,19 @@ public class StudentService {
 //		students[count-1] = null;
 		
 		System.arraycopy(students, idx+1, students, idx, count-- -idx-1);
+	}
+	public void sort() {
+		Student[] cloneStudents = students.clone();
+		
+		// 정렬 작업 (버블정렬)
+		// 
+		
+		System.out.println("-----------------------------------------------------");
+		System.out.println("학번\t이름\t국어\t영어\t수학\t총점\t평균");
+		System.out.println("-----------------------------------------------------");
+		
+		for(int i = 0 ; i < count ; i++) {
+			System.out.println(cloneStudents[i]);
+		}
 	}
 }
