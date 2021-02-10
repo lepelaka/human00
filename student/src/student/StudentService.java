@@ -1,20 +1,27 @@
 package student;
 
-import static student.StudentUtils.*; // static import
+// static import
+import static student.StudentUtils.nextInt;
+import static student.StudentUtils.nextLine;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 public class StudentService {
 	// 학생에 대한 관리(필드)
 	// 배열로 학생들을 관리
-	Student[] students = new Student[10];
-	int count;
+//	Student[] students = new Student[10];
+//	int count;
+	List<Student> students = new ArrayList<>();
 	
 	{
-		students[count++] = new Student(1, "둘리", 90, 70, 70);
-		students[count++] = new Student(2, "도우너", 90, 100, 80);
-		students[count++] = new Student(3, "또치", 90, 80, 75);
-		students[count++] = new Student(4, "고길동", 90, 80, 75);
-		students[count++] = new Student(5, "고철수", 90, 80, 75);
+		students.add(new Student(1, "둘리", 90, 70, 70));
+		students.add(new Student(2, "도우너", 90, 100, 80));
+		students.add(new Student(3, "또치", 90, 80, 75));
+		students.add(new Student(4, "고길동", 70, 80, 75));
+		students.add(new Student(5, "고철수", 98, 40, 75));
 	}
 	// 기능에 대한 관리(CRUD)
 	// CREATE, READ, UPDATE, DELETE
@@ -37,7 +44,7 @@ public class StudentService {
 		System.out.print("수학 > ");
 		int mat = nextInt();
 		
-		students[count++] = new Student(no, name, kor, eng, mat);
+		students.add(new Student(no, name, kor, eng, mat));
 	}
 	// 조회(목록 조회)
 	void list() { // 선언
@@ -45,8 +52,8 @@ public class StudentService {
 		System.out.println("학번\t이름\t국어\t영어\t수학\t총점\t평균");
 		System.out.println("-----------------------------------------------------");
 		
-		for(int i = 0 ; i < count ; i++) {
-			System.out.println(students[i]);
+		for(int i = 0 ; i < students.size() ; i++) {
+			System.out.println(students.get(i));
 		}
 	}
 	// 수정
@@ -77,9 +84,9 @@ public class StudentService {
 		Student student = null; // 주소값 없음
 		// {0x100, 0x200, 0x300}
 		
-		for(int i = 0 ; i < count ; i++ ) { 
-			if(students[i].getNo() == no) { // 사용자 입력값 == 기존학생 배열의 학번
-				student = students[i]; // 주소값 복사
+		for(int i = 0 ; i < students.size() ; i++ ) { 
+			if(students.get(i).getNo() == no) { // 사용자 입력값 == 기존학생 배열의 학번
+				student = students.get(i); // 주소값 복사
 			}
 		}
 		return student;
@@ -89,8 +96,8 @@ public class StudentService {
 		System.out.print("삭제할 학생의 학번을 입력하세요 > ");
 		int no = nextInt();
 		int idx = -1;
-		for(int i = 0 ; i < count ; i++) { // 
-			if(students[i].getNo() == no) {
+		for(int i = 0 ; i < students.size() ; i++) { // 
+			if(students.get(i).getNo() == no) {
 				idx = i;
 			}
 		}
@@ -107,20 +114,29 @@ public class StudentService {
 //		}
 //		students[count-1] = null;
 		
-		System.arraycopy(students, idx+1, students, idx, count-- -idx-1);
+		students.remove(idx);
 	}
 	public void sort() {
-		Student[] cloneStudents = students.clone();
-		
+		List<Student> cloneStudents = new ArrayList<>(students); // 객체 복제
+//		Student s = students[0].clone();
 		// 정렬 작업 (버블정렬)
-		// 
-		
+		// n * logn
+//		for(int i = 0 ; i < count - 1 ; i++) {
+//			for(int j = 0 ; j < count - i - 1 ; j++) {
+//				if(cloneStudents[j].getTotal() > cloneStudents[j+1].getTotal()) {
+//					Student tmp = cloneStudents[j];
+//					cloneStudents[j] = cloneStudents[j+1];
+//					cloneStudents[j+1] = tmp;
+//				}
+//			}
+//		}
+		Collections.sort(cloneStudents, Student.RANK_ORDER);
 		System.out.println("-----------------------------------------------------");
 		System.out.println("학번\t이름\t국어\t영어\t수학\t총점\t평균");
 		System.out.println("-----------------------------------------------------");
 		
-		for(int i = 0 ; i < count ; i++) {
-			System.out.println(cloneStudents[i]);
+		for(int i = 0 ; i < cloneStudents.size() ; i++) {
+			System.out.println(cloneStudents.get(i));
 		}
 	}
 }

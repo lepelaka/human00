@@ -1,7 +1,9 @@
 package student;
 
+import java.util.Comparator;
+
 // API의 대상
-public class Student {
+public class Student implements Cloneable, Comparable<Student>{
 	// 학번, 이름, 국어, 영어, 수학(필드로 정의)
 	// 총점, 평균(메서드로 정의)
 	private int no;
@@ -9,6 +11,13 @@ public class Student {
 	private int kor;
 	private int eng;
 	private int mat;
+	
+	public final static Comparator<Student> RANK_ORDER = new Comparator<Student>() {
+		@Override
+		public int compare(Student o1, Student o2) {
+			return -(o1.getTotal() - o2.getTotal());
+		}
+	};
 	
 	public Student() {} // 기본생성자
 
@@ -86,5 +95,22 @@ public class Student {
 				mat + "\t" +
 				getTotal() + "\t" +
 				getAvg();
+	}
+
+	@Override
+	protected Student clone() {
+		Student student = null;
+		try {
+			student = (Student)super.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return student;
+	}
+
+	@Override
+	public int compareTo(Student o) {
+		return no - o.no; // 오름차순 >> 내림차순
 	}
 }

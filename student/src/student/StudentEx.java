@@ -39,6 +39,7 @@ public class StudentEx {
 					return; // 메서드 종료(main method)
 				default:
 					throw new MyRangeException(1, 6);
+//					System.out.println("1부터 6사이의 값을 입력하세요");
 				}
 			} catch (NumberFormatException e) {
 				System.out.println("정확한 숫자값을 입력해주세요");
