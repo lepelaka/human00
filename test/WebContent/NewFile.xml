@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student>
+		<no>1</no>
+		<name>고길동</name>
+		<kor>90</kor>
+		<eng>80</eng>
+		<mat>80</mat>
+	</student>
+	<student>
+		<no>2</no>
+		<name>둘리</name>
+		<kor>80</kor>
+		<eng>70</eng>
+		<mat>90</mat>
+	</student>
+</students>

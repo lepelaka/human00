@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Page Title</title>
+</head>
+<body>
+	<button id="ajaxButton" type="button">Make a request</button>
+
+	<script>
+(function() {
+	var httpRequest;
+	document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+
+	function makeRequest() {
+		httpRequest = new XMLHttpRequest();
+	    httpRequest.onreadystatechange = function() {
+	    	if (httpRequest.readyState === 4 && httpRequest.status === 200) { // success
+				alert(httpRequest.responseText);
+	    	}
+	    	else { // error
+				alert('request에 뭔가 문제가 있어요.');
+			}
+		}
+	    httpRequest.open('GET', 'NewFile.xml');
+	    httpRequest.send();
+  	};
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        window.onload = function() {
+            var h1 = document.createElement("h1");
+            var text = document.createTextNode("hello world");
+            var body = document.getElementsByTagName("body");
+
+            h1.appendChild(text);
+            body[0].appendChild(h1);
+        
+            var img = document.createElement("img");
+            img.src = "https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png";
+            img.alt = "다음 로고";
+            img["style"] = "width:200px";
+            img.setAttribute("id", "img1");
+            img.setAttribute("data-javaman", "자바맨");
+            body[0].appendChild(img);
+
+            // javabean : getter 파라미터0, setter 파라미터1 >>
+            // 일반적으로 getter보다 setter가 파라미터가 한개 더 많다.
+
+            // alert(document.body.innerHTML);
+            // alert(document.body.innerText);
+
+            document.body.innerHTML += "<h1>추가된 내용</h1>";
+
+            var myId = document.getElementById("myId");
+            // alert(myId.innerText);
+
+            // 기본 이벤트
+            document.getElementById("myId2").onclick = function(e) {
+                // alert(this.innerText);
+                this.style.color = "blue";
+                this.style.border = "1px solid";
+                console.log(e);
+                console.log(event);
+                console.log(event == e);
+            }
+
+            document.getElementById("myId2").click();
+        }
+    </script>
+</head>
+<body>
+    <h1 id="myId" style="color: red;" onclick="alert(this.innerText)">자바맨이 왔다 1</h1>
+    <h1 id="myId2">자바맨이 왔다 2</h1>
+    <h2>안녕 안녕</h2>
+</body>
+</html>
